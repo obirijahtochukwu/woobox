@@ -152,7 +152,7 @@ const QuizSetting = () => {
   };
   const handleBlockAdd = () => {
     const updateQuizData = { ...quizData };
-    const newItem: contentSettingType = {
+    const newItem: contentSettingType | any = {
       block: updateQuizData.contentSetting.length + 1,
       label: `block ${updateQuizData.contentSetting.length + 1}`,
       pointValue: "",
@@ -194,7 +194,7 @@ const QuizSetting = () => {
       button: "",
     };
     updateQuizData.contentSetting = [...updateQuizData.contentSetting, newItem];
-    setCurrentIndex(updateQuizData.contentSetting.length -1);
+    setCurrentIndex(updateQuizData.contentSetting.length - 1);
     dispatch(setQuiz(updateQuizData));
   };
   const menuItems = [

@@ -61,6 +61,7 @@ const MultipleChoice = ({ index }: { index: number }) => {
             questionSetting: {
               ...questionSetting,
               multipleChoice: questionSetting.multipleChoice.filter(
+                //eslint-disable-next-line
                 (item, index1) => optionIndex !== index1
               ),
             },
